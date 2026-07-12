@@ -1,0 +1,8 @@
+# Copy to .dev.vars for `npm run preview`. Do not commit .dev.vars.
+AUTH_SECRET=replace-with-a-random-32-plus-character-secret
+IP_HASH_SECRET=replace-with-a-different-random-32-plus-character-secret
+AUTH_MODE=open
+
+# Optional Google Business Profile synchronization
+# GOOGLE_BUSINESS_ACCESS_TOKEN=
+# GOOGLE_BUSINESS_ACCOUNT_ID=

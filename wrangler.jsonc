@@ -1,0 +1,34 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "alyam-command-center",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-05-20",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "alyam-command-center"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "ALYAM_DB",
+      "database_name": "alyam-command-center-db",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "ALYAM_KV",
+      "id": "REPLACE_WITH_KV_NAMESPACE_ID"
+    }
+  ],
+  "vars": {
+    "AUTH_MODE": "open"
+  }
+}
